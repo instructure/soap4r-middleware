@@ -75,7 +75,12 @@ class Soap4r::Middleware::Base
     if conn_data.is_nocontent
       status = 202 # ACCEPTED
     elsif conn_data.is_fault
-      status = 500 # INTERNAL_SERVER_ERROR
+      # rather than sending the 500 here, let's bubble up the exception so the
+      # parent application can do with it what it will. The only downside is
+      # soap4r has already converted the exception into a soap response body at
+      # this point, which isn't what we want at all.
+      # maybe someday i'll re-parse the response or something. but not today.
+      raise conn_data.send_string
     else
       body = conn_data.send_string
     end
