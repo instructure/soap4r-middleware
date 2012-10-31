@@ -19,5 +19,6 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.add_dependency 'soap4r', '~> 1.5'
+  # this gem also works in ruby 1.8.7
+  s.add_dependency 'soap4r-ruby1.9', '2.0.0'
 end

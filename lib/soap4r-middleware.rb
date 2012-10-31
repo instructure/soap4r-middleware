@@ -66,7 +66,7 @@ module Soap4r
         # maybe someday i'll re-parse the response or something. but not today.
         raise conn_data.send_string
       else
-        body = conn_data.send_string
+        body << conn_data.send_string
       end
       return status, headers, body
     end
