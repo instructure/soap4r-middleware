@@ -7,8 +7,8 @@ Gem::Specification.new do |s|
   s.version     = Soap4r::Middleware::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Brian Palmer"]
-  s.email       = ["brian@codekitchen.net"]
-  s.homepage    = "https://www.github.com/codekitchen/soap4r-middleware"
+  s.email       = ["brianp@instructure.com"]
+  s.homepage    = "https://www.github.com/instructure/soap4r-middleware"
   s.summary     = %q{Provides a Rack middleware for exposing SOAP server endpoints}
   s.description = %q{Sometimes, you just gotta SOAP.}
 
