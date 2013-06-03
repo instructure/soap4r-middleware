@@ -19,7 +19,7 @@ module Soap4r
         # we can act as both a middleware and an app
         @app ?
           @app.call(env) :
-          [ 404, { "Content-Type" => "text/html" }, "Not Found" ]
+          [ 404, { "Content-Type" => "text/html" }, ["Not Found"] ]
       end
     end
 
