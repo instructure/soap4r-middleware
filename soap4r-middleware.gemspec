@@ -12,7 +12,6 @@ Gem::Specification.new do |s|
   s.summary     = %q{Provides a Rack middleware for exposing SOAP server endpoints}
   s.description = %q{Sometimes, you just gotta SOAP.}
 
-  s.rubyforge_project = "soap4r-middleware"
   s.license           = 'MIT'
 
   s.files         = `git ls-files`.split("\n")
